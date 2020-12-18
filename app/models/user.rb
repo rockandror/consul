@@ -125,6 +125,7 @@ class User < ApplicationRecord
   end
 
   before_validation :clean_document_number
+  before_create :add_unsubscribe_hash
 
   # Get the existing user by email if the provider gives us a verified email.
   def self.first_or_initialize_for_oauth(auth)
@@ -419,5 +420,9 @@ class User < ApplicationRecord
         attributes: :username,
         maximum: User.username_max_length)
       validator.validate(self)
+    end
+
+    def add_unsubscribe_hash
+      self.unsubscribe_hash = SecureRandom.hex
     end
 end
