@@ -963,3 +963,7 @@ en:
     create:
       enqueue_remote_translation: Translations have been correctly requested.
     button: Translate page
+  unsubscribe:
+    edit:
+      notifications: Notifications
+      save_changes_submit: Save changes

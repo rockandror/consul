@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   draw :related_content
   draw :sdg_management
   draw :tag
+  draw :unsubscribe
   draw :user
   draw :valuation
   draw :verification
