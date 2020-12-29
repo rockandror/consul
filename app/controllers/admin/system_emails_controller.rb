@@ -67,6 +67,7 @@ class Admin::SystemEmailsController < Admin::BaseController
     end
 
     def load_sample_proposal_notifications
+      @user = current_user
       @notifications = Notification.where(notifiable_type: "ProposalNotification").limit(2)
       @subject = t("mailers.proposal_notification_digest.title", org_name: Setting["org_name"])
     end
