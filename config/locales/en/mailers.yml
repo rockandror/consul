@@ -32,8 +32,8 @@ en:
     direct_message_for_receiver:
       subject: "You have received a new private message"
       reply: Reply to %{sender}
-      unsubscribe: "If you don't want to receive direct messages, visit %{account} and uncheck 'Receive emails about direct messages'."
-      unsubscribe_account: My account
+      unsubscribe: "If you don't want to receive direct messages, visit %{unsubscribe} and uncheck 'Receive emails about direct messages'."
+      unsubscribe_account: Unsubscribe
     direct_message_for_sender:
       subject: "You have sent a new private message"
       title: "You have sent a new private message to <strong>%{receiver}</strong> with the content:"

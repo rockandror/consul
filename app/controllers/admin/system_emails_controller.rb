@@ -120,6 +120,7 @@ class Admin::SystemEmailsController < Admin::BaseController
       @direct_message = DirectMessage.new(sender: current_user, receiver: current_user,
                                           title: t("admin.system_emails.message_title"),
                                           body: t("admin.system_emails.message_body"))
+      @receiver = @direct_message.receiver
       @subject = t("mailers.#{@system_email}.subject")
     end
 
