@@ -22,6 +22,7 @@ es:
       new_reply_by: Hay una nueva respuesta de <strong>%{commenter}</strong> a tu comentario en
       subject: Alguien ha respondido a tu comentario
       title: Nueva respuesta a tu comentario
+      unsubscribe: Desuscribirse
     proposal_notification_digest:
       info: "A continuación te mostramos las nuevas notificaciones que han publicado los autores de las propuestas que estás apoyando en %{org_name}."
       title: "Notificaciones de propuestas en %{org_name}"

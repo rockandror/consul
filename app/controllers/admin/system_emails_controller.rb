@@ -96,6 +96,7 @@ class Admin::SystemEmailsController < Admin::BaseController
       reply = Comment.select(&:reply?).last
       if reply
         @email = ReplyEmail.new(reply)
+        @receiver = @email.recipient
       else
         redirect_to admin_system_emails_path, alert: t("admin.system_emails.alert.no_replies")
       end
