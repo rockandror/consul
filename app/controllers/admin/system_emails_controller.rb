@@ -85,6 +85,7 @@ class Admin::SystemEmailsController < Admin::BaseController
       @comment = Comment.where(commentable_type: %w[Debate Proposal Budget::Investment]).last
       if @comment
         @commentable = @comment.commentable
+        @receiver = @commentable.author
         @subject = t("mailers.comment.subject", commentable: commentable_name)
       else
         redirect_to admin_system_emails_path, alert: t("admin.system_emails.alert.no_comments")

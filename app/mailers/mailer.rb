@@ -9,8 +9,9 @@ class Mailer < ApplicationMailer
     @comment = comment
     @commentable = comment.commentable
     @email_to = @commentable.author.email
+    @receiver = @commentable.author
 
-    with_user(@commentable.author) do
+    with_user(@receiver) do
       subject = t("mailers.comment.subject", commentable: t("activerecord.models.#{@commentable.class.name.underscore}", count: 1).downcase)
       mail(to: @email_to, subject: subject) if @commentable.present? && @commentable.author.present?
     end

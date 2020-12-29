@@ -7,6 +7,7 @@ en:
       new_comment_by: There is a new comment from <strong>%{commenter}</strong>
       subject: Someone has commented on your %{commentable}
       title: New comment
+      unsubscribe: Unsubscribe
     config:
       manage_email_subscriptions: To stop receiving these emails change your settings in
     email_verification:
